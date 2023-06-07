@@ -6,7 +6,9 @@ export default {
 			"name": "root",
 			"children": [
 				"647eea65098f070019962fe4",
-				"647eea65098f070019962fe7"
+				"647eea65098f070019962fe7",
+				"647fdbbf477c3a0019b2addb",
+				"647fdeb5588b2d001957db1a"
 			]
 		},
 		"647eea65098f070019962fe4": {
@@ -18,6 +20,16 @@ export default {
 			"id": "647eea65098f070019962fe7",
 			"name": "index",
 			"pageUrl": "index"
+		},
+		"647fdbbf477c3a0019b2addb": {
+			"id": "647fdbbf477c3a0019b2addb",
+			"pageUrl": "log-in",
+			"name": "Log in"
+		},
+		"647fdeb5588b2d001957db1a": {
+			"id": "647fdeb5588b2d001957db1a",
+			"pageUrl": "register",
+			"name": "Register"
 		}
 	},
 	"mode": "production",

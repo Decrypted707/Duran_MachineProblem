@@ -1,9 +1,10 @@
 import React from "react";
 import theme from "theme";
-import { Theme, Link, Text, Button, Box, Section, Image } from "@quarkly/widgets";
+import { Theme, Link, Image, Box, Text, Section } from "@quarkly/widgets";
 import { Helmet } from "react-helmet";
 import { GlobalQuarklyPageStyles } from "global-page-styles";
-import { RawHtml, Menu, Override } from "@quarkly/components";
+import { RawHtml, Override } from "@quarkly/components";
+import * as Components from "components";
 export default (() => {
 	return <Theme theme={theme}>
 		<GlobalQuarklyPageStyles pageUrl={"index"} />
@@ -15,37 +16,10 @@ export default (() => {
 			<link rel={"shortcut icon"} href={"https://uploads.quarkly.io/readme/cra/favicon-32x32.ico"} type={"image/x-icon"} />
 		</Helmet>
 		{" "}
-		<Section>
-			<Box
-				display="flex"
-				padding="12px 0"
-				justify-content="space-between"
-				align-items="center"
-				flex-direction="row"
-				md-flex-direction="column"
-			>
-				<Text margin="0" md-margin="0px 0 20px 0" text-align="left" font="--lead">
-					Capybara
-
-Company
-				</Text>
-				<Menu
-					display="flex"
-					justify-content="flex-end"
-					font="--base"
-					font-weight="700"
-					md-flex-direction="column"
-					md-align-items="center"
-					width="50% content-box"
-				/>
-				<Button>
-					Log in
-				</Button>
-				<Button>
-					Register
-				</Button>
-			</Box>
-		</Section>
+		<Components.Header>
+			<Override slot="button" type="button" href="/log-in" />
+			<Override slot="button1" href="/register" />
+		</Components.Header>
 		<Section padding="65px 0 65px 0" sm-padding="60px 0 60px 0" quarkly-title="Images-4">
 			<Override slot="SectionContent" flex-direction="row" flex-wrap="wrap" />
 			<Box
